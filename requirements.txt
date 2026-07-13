@@ -11,3 +11,4 @@ scikit-learn>=1.4
 
 # Ambiente de notebooks
 jupyter>=1.0
+

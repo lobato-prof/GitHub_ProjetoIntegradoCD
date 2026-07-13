@@ -80,6 +80,6 @@ O horizonte útil está travado em ~1h porque o modelo usa clima *observado*, n�
 ## Estrutura de entregas
 - `M1_Escopo.pdf` - Ficha de escopo do projeto
 - `M2_versao_04_07_2026.ipynb` - Análise Exploratória de Dados (EDA)
-- `M3_versao_12_07_2026.ipynb` - Modelagem, avaliação e análise de erros
+- `M3_versao_13_07_2026.ipynb` - Modelagem, avaliação e análise de erros
 
 ---
