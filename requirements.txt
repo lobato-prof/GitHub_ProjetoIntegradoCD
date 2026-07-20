@@ -1,14 +1,29 @@
-# Núcleo de dados
-pandas>=2.0
-numpy>=1.24
+# Projeto Integrado - PÓSUNIMONTES
+# Módulos 2, 3 (notebooks) e 4 (dashboard)
+#
+# Instalação:  pip install -r requirements.txt
+# Testado em Python 3.10 - 3.12
 
-# Visualização
-matplotlib>=3.7
-seaborn>=0.12
+# Núcleo de dados
+pandas==2.2.3
+numpy==1.26.4
+pyarrow==17.0.0
 
 # Modelagem
-scikit-learn>=1.4
+scikit-learn==1.5.2
+joblib==1.4.2
+
+# Explicabilidade (Módulo 4)
+shap==0.46.0
+
+# Dashboard (Módulo 4)
+streamlit==1.39.0
+plotly==5.24.1
+
+# Visualização nos notebooks (Módulos 2 e 3)
+matplotlib==3.9.2
+seaborn==0.13.2
 
 # Ambiente de notebooks
-jupyter>=1.0
-
+jupyter==1.1.1
+notebook==7.2.2
