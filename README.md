@@ -77,7 +77,7 @@ O horizonte útil está travado em ~1h porque o modelo usa clima *observado*, n�
 
 ---
 
-## Produto de dados (Módulo 4)
+## Dashboards (Módulo 4)
 
 O modelo do M3 se torna dashboard com objetivo de explicar as decisões do modelo seja para operação, manutenção e/ou gestão.
 
