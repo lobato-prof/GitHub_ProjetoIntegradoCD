@@ -1,0 +1,96 @@
+{
+  "gerado_em": "2026-07-20T09:30:26",
+  "data_corte": "2020-06-10",
+  "limiar_baixa": 0.5,
+  "n_treino": 99813,
+  "n_teste": 33440,
+  "periodo_treino": [
+    "2020-05-15 01:00:00",
+    "2020-06-09 23:45:00"
+  ],
+  "periodo_teste": [
+    "2020-06-10 00:00:00",
+    "2020-06-17 22:45:00"
+  ],
+  "atributos": [
+    "AC_POWER",
+    "AC_POWER_lag1",
+    "AC_POWER_lag2",
+    "AC_POWER_lag4",
+    "DC_POWER_NORM",
+    "DC_POWER_lag1_NORM",
+    "DC_POWER_lag2_NORM",
+    "DC_POWER_lag4_NORM",
+    "IRRADIATION",
+    "IRRADIATION_lag4",
+    "AMBIENT_TEMPERATURE",
+    "AMBIENT_TEMPERATURE_lag4",
+    "MODULE_TEMPERATURE",
+    "MODULE_TEMPERATURE_lag4",
+    "D_IRRADIATION_1H",
+    "D_AC_POWER_1H",
+    "D_MODULE_TEMP_1H",
+    "DELTA_TEMP",
+    "AC_MEDIA_1H",
+    "AC_DESVIO_1H",
+    "SIN_DIA",
+    "COS_DIA",
+    "MINUTO_DIA",
+    "PLANTA",
+    "MEDIANA_SLOT"
+  ],
+  "capacidade_max_teste": 1410.95,
+  "regressao": {
+    "RMSE": 147.7832773936224,
+    "MAE": 74.09075164776733,
+    "R2": 0.7947001448727791,
+    "piso_RMSE": 189.643487123766,
+    "piso_persistencia": 189.643487123766,
+    "piso_climatologia": 233.12688239893617,
+    "reducao_sobre_piso": 0.22073106946628018
+  },
+  "classificacao": {
+    "ROC_AUC": 0.9132986546998411,
+    "piso_AUC": 0.5469841398550999,
+    "recall": 0.7324203723649793,
+    "precisao": 0.7989258140315542,
+    "matriz_confusao": [
+      [
+        10123,
+        1198
+      ],
+      [
+        1739,
+        4760
+      ]
+    ],
+    "prevalencia_teste": 0.36470258136924805,
+    "relatorio": {
+      "Geracao normal": {
+        "precision": 0.853397403473276,
+        "recall": 0.8941789594558784,
+        "f1-score": 0.8733123409394815,
+        "support": 11321.0
+      },
+      "Baixa geracao": {
+        "precision": 0.7989258140315542,
+        "recall": 0.7324203723649793,
+        "f1-score": 0.7642289475796741,
+        "support": 6499.0
+      },
+      "accuracy": 0.8351851851851851,
+      "macro avg": {
+        "precision": 0.8261616087524151,
+        "recall": 0.8132996659104288,
+        "f1-score": 0.8187706442595778,
+        "support": 17820.0
+      },
+      "weighted avg": {
+        "precision": 0.8335314741925942,
+        "recall": 0.8351851851851851,
+        "f1-score": 0.8335293457966426,
+        "support": 17820.0
+      }
+    }
+  }
+}
