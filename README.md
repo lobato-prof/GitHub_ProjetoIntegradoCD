@@ -77,31 +77,6 @@ O horizonte útil está travado em ~1h porque o modelo usa clima *observado*, n�
 
 ---
 
-## Como executar o dashboard (Módulo 4)
-
-```bash
-# 1. Ambiente
-python -m venv .venv
-.venv\Scripts\activate          # Windows
-# source .venv/bin/activate     # Linux / macOS
-
-# 2. Dependências
-pip install -r requirements.txt
-
-# 3. Dados (ver seção "Fonte de dados"): baixar do Kaggle e extrair os
-#    4 arquivos CSV em dataset/
-
-# 4. Gerar os artefatos do modelo (treina e pré-computa o SHAP; ~3 a 10 min)
-python scripts/treinar_e_exportar.py
-
-# 5. Subir o dashboard
-streamlit run app/app.py
-```
-
-O dashboard abre em `http://localhost:8501`.
-
----
-
 ## Produto de dados (Módulo 4)
 
 O modelo do M3 se torna dashboard com objetivo de explicar as decisões do modelo seja para operação, manutenção e/ou gestão.
@@ -139,6 +114,31 @@ Cada visão abre com `st.warning()` acima da primeira dobra, contendo apenas as 
 ### Rótulos em linguagem do usuário
 
 O dashboard nunca exibe nome de coluna. `src/config.py` centraliza o mapa `ROTULOS`: `MODULE_TEMPERATURE` aparece como "Temperatura do painel (°C)", `MEDIANA_SLOT` como "Geração típica deste horário (kW)", `D_IRRADIATION_1H` como "Variação da irradiância na última hora". Métricas seguem a mesma regra: "Erro típico da previsão" em vez de MAE, "Ganho sobre o método simples" em vez de redução sobre o piso.
+
+---
+
+## Como executar o dashboard (Módulo 4)
+
+```bash
+# 1. Ambiente
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+# source .venv/bin/activate     # Linux / macOS
+
+# 2. Dependências
+pip install -r requirements.txt
+
+# 3. Dados (ver seção "Fonte de dados"): baixar do Kaggle e extrair os
+#    4 arquivos CSV em dataset/
+
+# 4. Gerar os artefatos do modelo (treina e pré-computa o SHAP; ~3 a 10 min)
+python scripts/treinar_e_exportar.py
+
+# 5. Subir o dashboard
+streamlit run app/app.py
+```
+
+O dashboard abre em `http://localhost:8501`.
 
 ---
 
