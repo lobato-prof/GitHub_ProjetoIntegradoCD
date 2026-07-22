@@ -123,15 +123,14 @@ O dashboard nunca exibe nome de coluna. `src/config.py` centraliza o mapa `ROTUL
 # 1. Ambiente
 python -m venv .venv
 .venv\Scripts\activate          # Windows
-# source .venv/bin/activate     # Linux / macOS
+# source .venv/bin/activate     # Linux
 
 # 2. Dependências
 pip install -r requirements.txt
 
-# 3. Dados (ver seção "Fonte de dados"): baixar do Kaggle e extrair os
-#    4 arquivos CSV em dataset/
+# 3. Dados (ver seção "Fonte de dados"): baixar do Kaggle e extrair os 4 arquivos CSV em dataset/
 
-# 4. Gerar os artefatos do modelo (treina e pré-computa o SHAP; ~3 a 10 min)
+# 4. Gerar os artefatos do modelo (treina e pré-computa o SHAP; ~5 a 12 min)
 python scripts/treinar_e_exportar.py
 
 # 5. Subir o dashboard
