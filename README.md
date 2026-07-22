@@ -147,3 +147,6 @@ O dashboard abre em `http://localhost:8501`.
 - `M3_versao_13_07_2026.ipynb` - Modelagem, avaliação e análise de erros
 - `app/`, `src/`, `scripts/` - Produto de dados: dashboard interativo (Módulo 4) 
 ---
+
+---
+Conforme pontuado para os módulos anteriores, para o desenvolvimento do trabalho, tem-se empregado IA (Claude Sonnet 4.6, Anthropic) para estruturação e redação; a autoria intelectual e as decisões do projeto são da equipe. 
