@@ -140,7 +140,7 @@ amostra.to_parquet(caminho_artefato('amostra_teste.parquet'), index=False)
 print('      amostra: %d linhas' % len(amostra))
 
 # ---------------------------------------------------------------- SHAP
-print('[5/6] Calculando o SHAP (pode levar alguns minutos)...')
+print('[5/6] Calculando o SHAP...')
 fundo_reg = X_tr.sample(min(N_BACKGROUND, len(X_tr)), random_state=config.RANDOM_STATE)
 X_amostra = amostra[config.ATRIBUTOS]
 
