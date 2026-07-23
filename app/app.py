@@ -223,7 +223,7 @@ if visao == 'Panorama geral':
                           legend=dict(orientation='h', y=1.12, x=0))
         st.plotly_chart(fig, use_container_width=True)
         st.caption('Média horária entre os inversores da usina. As linhas se separam '
-                   'nos dias de nuvem — é ali que o modelo erra.')
+                   'nos dias de nuvem, aqui que o modelo erra.')
 
     with dir_:
         st.markdown('#### Onde o erro se concentra')
@@ -500,7 +500,7 @@ por temperatura.
 # ================================================ VISÃO 5: NARRATIVA 4 ATOS
 elif visao == 'A história do projeto':
     st.title('A história do projeto')
-    st.caption('Do problema de operação ao que o modelo entrega — e ao que ele não entrega.')
+    st.caption('Do problema de operação ao que o modelo entrega e ao que ele não entrega.')
 
     a1, a2, a3, a4 = st.tabs(['1 · O problema', '2 · Os dados',
                               '3 · O modelo', '4 · Os limites'])
@@ -516,7 +516,7 @@ A geração solar é intermitente por natureza: depende da irradiância, da
 temperatura dos painéis e do tempo, que muda ao longo do dia.
 
 Quem sente isso é a equipe de operação e manutenção. Sem previsão de curto
-prazo, ela trabalha de forma **reativa** — a queda de produção só aparece
+prazo, ela trabalha de forma **reativa**, a queda de produção só aparece
 depois de ter ocorrido, e não há referência objetiva para dizer qual inversor
 está gerando abaixo do que deveria.
 
@@ -524,18 +524,18 @@ O custo é duplo. Para a rede, o desvio entre a energia programada e a
 entregue pode gerar penalidade. Para a usina, um inversor com defeito passa
 semanas subgerando antes de alguém notar.
 
-**A pergunta do projeto:** dá para antecipar a geração da próxima hora e, de
-quebra, apontar quais unidades estão fora do padrão?
+**A pergunta do projeto:** dá para antecipar a geração da próxima hora e, ainda, 
+apontar quais unidades estão fora do padrão?
             """)
         with d:
             st.info("""
 **Quem usa este painel**
 
-**Operação** — antecipar déficit e programar reserva.
+**Operação:** antecipar déficit e programar reserva.
 
-**Manutenção** — priorizar a visita aos inversores fora do padrão.
+**Manutenção:** priorizar a visita aos inversores fora do padrão.
 
-**Gestão** — entender o alcance e o limite do que foi construído.
+**Gestão:** entender o alcance e o limite do que foi construído.
             """, icon=':material/groups:')
 
     with a2:
@@ -554,9 +554,9 @@ tem **um** sensor de clima, medindo irradiância e temperatura do ar e do painel
 A análise exploratória (Módulo 2) revelou o achado que definiu todo o resto:
 **potência CC e CA no mesmo instante são quase a mesma variável** (correlação
 ≈ 1). Um modelo que usasse uma para prever a outra teria R² de 0,999 e não
-preveria nada — apenas reaprenderia a eficiência do inversor.
+preveria nada, apenas reaprenderia a eficiência do inversor.
 
-A saída foi mudar a pergunta: em vez de "qual a potência agora", **"qual será a
+A saída foi ajustar a pergunta: em vez de "qual a potência agora", **"qual será a
 potência daqui a uma hora"**. Aí a potência CC de agora vira informação
 legítima sobre o futuro.
             """)
@@ -591,7 +591,7 @@ O resultado tem duas metades, e a segunda é a interessante.
 **Prever o valor exato** rende erro médio de **{MET_R['MAE']:.0f} kW**
 ({MET_R['MAE'] / CAP_MAX:.0%} da capacidade) e ganho de
 **{MET_R['reducao_sobre_piso']:.0%}** sobre simplesmente repetir a potência
-atual. Ganho real, mas modesto — e abaixo da meta de R² ≥ 0,90 que o projeto
+atual. Ganho real, mas modesto e abaixo da meta de R² ≥ 0,90 que o projeto
 tinha fixado no Módulo 1.
 
 **Prever se haverá queda** salta de **{MET_C['piso_AUC']:.3f}** para
@@ -608,7 +608,7 @@ mais fácil era também a mais útil.
 O Módulo 1 previa R² ≥ 0,90. O resultado foi **{MET_R['R2']:.2f}**.
 
 Com 34 dias de uma única estação, esse era o teto. Reportar a hipótese
-refutada é parte do trabalho — não uma falha dele.
+refutada é parte do trabalho, não uma falha dele.
             """, icon=':material/science:')
 
     with a4:
@@ -622,7 +622,7 @@ refutada é parte do trabalho — não uma falha dele.
             st.warning("""
 **O horizonte trava em 1 hora.**
 O modelo usa clima **medido**, não **previsto**. Às 10h ele entrega a geração
-das 11h. Não entrega a das 16h — isso exigiria previsão meteorológica como
+das 11h. Não entrega a das 16h, isso exigiria previsão meteorológica como
 entrada, que não existe nesta base. É o limite mais sério para uso real.
             """, icon=':material/schedule:')
             st.warning("""
