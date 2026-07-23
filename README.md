@@ -120,6 +120,10 @@ O dashboard nunca exibe nome de coluna. `src/config.py` centraliza o mapa `ROTUL
 ## Como executar o dashboard (Módulo 4)
 
 ```bash
+# 0. Git Clone
+git clone https://github.com/lobato-prof/GitHub_ProjetoIntegradoCD.git
+cd GitHub_ProjetoIntegradoCD
+
 # 1. Ambiente
 python -m venv .venv
 .venv\Scripts\activate          # Windows
@@ -128,7 +132,7 @@ python -m venv .venv
 # 2. Dependências
 pip install -r requirements.txt
 
-# 3. Dados (ver seção "Fonte de dados"): baixar do Kaggle e extrair os 4 arquivos CSV em dataset/
+# 3. Dados (ver seção "Fonte de dados"). Os CSVs estão no repositório para permitir execução imediata, a fonte oficial e data de acesso na seção "Fonte de dados".
 
 # 4. Gerar os artefatos do modelo (treina e pré-computa o SHAP; ~5 a 12 min)
 python scripts/treinar_e_exportar.py
@@ -141,7 +145,7 @@ O dashboard abre em `http://localhost:8501`.
 
 ---
 
-## Estrutura de entregas
+## Entregas realizadas no decorrer do projeto:
 - `M1_Escopo.pdf` - Ficha de escopo do projeto
 - `M2_versao_04_07_2026.ipynb` - Análise Exploratória de Dados (EDA)
 - `M3_versao_13_07_2026.ipynb` - Modelagem, avaliação e análise de erros
