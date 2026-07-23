@@ -120,24 +120,26 @@ O dashboard nunca exibe nome de coluna. `src/config.py` centraliza o mapa `ROTUL
 ## Como executar o dashboard (Módulo 4)
 
 ```bash
-# 0. Git Clone
-git clone https://github.com/lobato-prof/GitHub_ProjetoIntegradoCD.git
-cd GitHub_ProjetoIntegradoCD
+# Acesso o prompt e crie uma pasta na raiz e acesse a mesma
+# 1. Git Clone
+git clone https://github.com/lobato-prof/GitHub_ProjetoIntegradoCD.git cd GitHub_ProjetoIntegradoCD
 
-# 1. Ambiente
+# 2. Ambiente
+# 2.1
 python -m venv .venv
+# 2.2
 .venv\Scripts\activate          # Windows
 # source .venv/bin/activate     # Linux
 
-# 2. Dependências
+# 3. Dependências
 pip install -r requirements.txt
 
-# 3. Dados (ver seção "Fonte de dados"). Os CSVs estão no repositório para permitir execução imediata, a fonte oficial e data de acesso na seção "Fonte de dados".
+# 4. Dados (ver seção "Fonte de dados"). Os CSVs estão no repositório para permitir execução imediata, a fonte oficial e data de acesso na seção "Fonte de dados".
 
-# 4. Gerar os artefatos do modelo (treina e pré-computa o SHAP; ~5 a 12 min)
+# 5. Gerar os artefatos do modelo (treina e pré-computa o SHAP; ~5 a 12 min)
 python scripts/treinar_e_exportar.py
 
-# 5. Subir o dashboard
+# 6. Subir o dashboard
 streamlit run app/app.py
 ```
 
