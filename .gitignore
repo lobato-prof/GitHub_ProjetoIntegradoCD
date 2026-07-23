@@ -7,5 +7,24 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-# Dados (opcional — veja observação abaixo)
-# *.csv
+# Credenciais (nunca versionar)
+.env
+*.key
+*.pem
+kaggle.json
+.streamlit/secrets.toml
+
+# Artefatos gerados pelo script de treino (regeráveis)
+artifacts/*.joblib
+artifacts/*.npz
+artifacts/*.parquet
+artifacts/*.json
+
+# Dados: os CSVs de dataset/ estão versionados de propósito, para permitir
+# execução imediata sem download. Dados públicos, sem informação pessoal.
+
+# Sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
