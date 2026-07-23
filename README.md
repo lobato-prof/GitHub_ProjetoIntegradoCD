@@ -17,7 +17,7 @@ A geração fotovoltaica é intermitente e estocástica: depende da irradiância
 
 # Fonte de dados
 
-[**Solar Power Generation Data**](https://www.kaggle.com/datasets/anikannal/solar-power-generation-data) — Kaggle (autor: Ani Kannal).
+[**Solar Power Generation Data**](https://www.kaggle.com/datasets/anikannal/solar-power-generation-data) — Kaggle (autor: Ani Kannal). Primeiro acesso em 20/06/2026.
 
 - Duas usinas solares na Índia, 34 dias, leituras a cada 15 minutos (~140 mil linhas).
 - Geração no nível de inversor (22 inversores por planta): `DC_POWER`, `AC_POWER`, `DAILY_YIELD`, `TOTAL_YIELD`.
@@ -88,14 +88,14 @@ O modelo do M3 se torna dashboard com objetivo de explicar as decisões do model
 | **Panorama geral** | Como o modelo se comporta nos 7 dias que nunca viu. Série prevista vs. realizada, concentração do erro entre dia e noite, matriz de confusão do alerta. |
 | **Previsão individual** | Por que o modelo previu *este* valor, para *este* instante. Waterfall SHAP local, nas duas trilhas, com a explicação em texto corrido. |
 | **O que o modelo aprendeu** | Importância global (SHAP) e como cada fator específico move a previsão. |
-| **Desempenho por inversor** | O resíduo sistemático por unidade — a ponte para manutenção preditiva. |
+| **Desempenho por inversor** | O resíduo sistemático por unidade, a ponte para manutenção preditiva. |
 | **A história do projeto** | Narrativa em 4 atos: problema → dados → modelo → limitações. |
 
 ### Narrativa em 4 atos
 
 1. **O problema** - a operação enxerga a queda depois que ela aconteceu.
 2. **Os dados** - 34 dias, duas usinas, e o vazamento que redefiniu a pergunta.
-3. **O modelo** - prever quantos kW é difícil; assim prevê se vai faltar.
+3. **O modelo** - prever quantos kW é difícil, assim prevê se vai faltar.
 4. **Os limites** - o que este modelo não faz.
 
 ### Explicabilidade (SHAP)
@@ -120,9 +120,12 @@ O dashboard nunca exibe nome de coluna. `src/config.py` centraliza o mapa `ROTUL
 ## Como executar o dashboard (Módulo 4)
 
 ```bash
-# Acesso o prompt e crie uma pasta na raiz e acesse a mesma
-# 1. Git Clone
-git clone https://github.com/lobato-prof/GitHub_ProjetoIntegradoCD.git cd GitHub_ProjetoIntegradoCD
+# Orientação: Abra o Prompt de Comando e crie uma pasta sem espaços ou acentos no caminho.
+# Exemplo:  mkdir C:\projeto  e depois  cd C:\projeto
+
+# 1. Baixar repositório, Git Clone
+git clone https://github.com/lobato-prof/GitHub_ProjetoIntegradoCD.git
+cd GitHub_ProjetoIntegradoCD
 
 # 2. Ambiente
 # 2.1
@@ -134,7 +137,7 @@ python -m venv .venv
 # 3. Dependências
 pip install -r requirements.txt
 
-# 4. Dados (ver seção "Fonte de dados"). Os CSVs estão no repositório para permitir execução imediata, a fonte oficial e data de acesso na seção "Fonte de dados".
+# 4.  Dados: os CSVs já estão no repositório, em dataset/, para permitir execução imediata. Fonte oficial e data de acesso na seção "Fonte de dados".
 
 # 5. Gerar os artefatos do modelo (treina e pré-computa o SHAP; ~5 a 12 min)
 python scripts/treinar_e_exportar.py
@@ -147,7 +150,7 @@ O dashboard abre em `http://localhost:8501`.
 
 ---
 
-## Entregas realizadas no decorrer do projeto:
+## Entregas realizadas no decorrer do projeto (Módulo 1, 2 e 3, presentes em "entregas parciais"):
 - `M1_Escopo.pdf` - Ficha de escopo do projeto
 - `M2_versao_04_07_2026.ipynb` - Análise Exploratória de Dados (EDA)
 - `M3_versao_13_07_2026.ipynb` - Modelagem, avaliação e análise de erros
